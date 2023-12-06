@@ -1,0 +1,19 @@
+﻿@namespace Undersoft.SDK.Blazor.Components
+@inherits PresenterComponent
+
+<footer @attributes="@AdditionalAttributes" class="@ClassName">
+    @if (ChildContent == null)
+    {
+        <div class="footer-text">
+            <span>@Text</span>
+        </div>
+        @if (ShowGoto)
+        {
+            <GoTop Target="@Target"></GoTop>
+        }
+    }
+    else
+    {
+        @ChildContent
+    }
+</footer>

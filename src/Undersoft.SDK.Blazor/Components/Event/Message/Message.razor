@@ -1,0 +1,11 @@
+﻿@namespace Undersoft.SDK.Blazor.Components
+@inherits PresenterComponent
+
+<div class="@ClassString" style="@StyleName">
+    <CascadingValue Value="this" IsFixed="true">
+        @foreach (var item in GetMessages())
+        {
+            <MessageItem @key="item" Icon="@item.Icon" Color="@item.Color" Content="@item.Content" Delay="@item.Delay" ShowBar="@item.ShowBar" ShowDismiss="@item.ShowDismiss" IsAutoHide="@item.IsAutoHide" OnDismiss="() => OnDismiss(item)" />
+        }
+    </CascadingValue>
+</div>

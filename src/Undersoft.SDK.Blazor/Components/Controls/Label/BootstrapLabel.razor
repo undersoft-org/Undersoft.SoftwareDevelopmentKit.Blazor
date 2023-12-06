@@ -1,0 +1,18 @@
+﻿@namespace Undersoft.SDK.Blazor.Components
+@inherits PresenterComponent
+
+@if (_showTooltip)
+{
+    <Tooltip Title="@Value">
+        @RenderLabel
+    </Tooltip>
+}
+else
+{
+    @RenderLabel
+}
+
+@code {
+    RenderFragment RenderLabel =>
+    @<label @attributes="AdditionalAttributes" class="@ClassString">@Value</label>;
+}

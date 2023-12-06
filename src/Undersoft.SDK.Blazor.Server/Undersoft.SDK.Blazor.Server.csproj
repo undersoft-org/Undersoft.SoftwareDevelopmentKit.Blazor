@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Company>Undersoft</Company>
+    <Authors>Dariusz Hanc</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <Version>1.6.1</Version>
+    <RepositoryUrl>https://github.com/undersoft-org/Undersoft.SoftwareDevelopmentKit.Blazor</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName>$(MSBuildProjectName.Replace(" ", "_"))</AssemblyName>
+    <AssemblyVersion>1.6.1.1</AssemblyVersion>
+    <FileVersion>1.6.1.1</FileVersion>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Undersoft.SDK.Blazor\Undersoft.SDK.Blazor.csproj" />
+  </ItemGroup>
+  
+ <ItemGroup>
+    <Using Include="Undersoft.SDK.Blazor.Components" />
+    <Using Include="Microsoft.AspNetCore.Components" />
+    <Using Include="Microsoft.Extensions.Options" />
+    <Using Include="Microsoft.JSInterop" />
+    <Using Include="System.ComponentModel.DataAnnotations" />
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+  </ItemGroup>
+
+</Project>

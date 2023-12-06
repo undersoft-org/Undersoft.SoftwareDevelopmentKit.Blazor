@@ -1,0 +1,9 @@
+﻿@namespace Undersoft.SDK.Blazor.Components
+@inherits PresenterComponent
+@attribute [ExcludeFromCodeCoverage]
+
+<div @attributes="@AdditionalAttributes" class="@ClassString">
+    <CascadingValue Value="this" IsFixed="true">
+        @ChildContent
+    </CascadingValue>
+</div>

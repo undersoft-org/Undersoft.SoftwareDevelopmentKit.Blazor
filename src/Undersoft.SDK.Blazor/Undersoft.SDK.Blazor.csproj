@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Company>Undersoft</Company>
+    <Authors>Dariusz Hanc</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <RepositoryUrl>https://github.com/hadarius/RadicalFramework.Presenting</RepositoryUrl>
+    <Version>1.6.1</Version>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName>$(MSBuildProjectName.Replace("Radical", "RadicalFramework"))</AssemblyName>
+    <AssemblyVersion>1.6.1.1</AssemblyVersion>
+    <FileVersion>1.6.1.1</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifierPlus2022" Version="5.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Undersoft.SoftwareDevelopmentKit\src\Undersoft.SDK.Service\Undersoft.SDK.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Undersoft.SDK.Blazor.Components" />
+    <Using Include="Undersoft.SDK.Service.Data.Store" />
+    <Using Include="Undersoft.SDK.Service.Data.Repository" />
+    <Using Include="Undersoft.SDK.Service.Data.Entity" />
+    <Using Include="Microsoft.AspNetCore.Components" />
+    <Using Include="Microsoft.Extensions.Options" />
+    <Using Include="Microsoft.JSInterop" />
+    <Using Include="System.ComponentModel.DataAnnotations" />
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+  </ItemGroup>
+
+</Project>
